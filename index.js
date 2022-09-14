@@ -32,7 +32,7 @@ function myFunction() {
 
 function summation(num) {
   var sum = 0
-  for (let i = 0; i <= num; num ++){
+  for (let i = 0; i <= num; i++){
     sum += i
   }
   return sum
@@ -96,7 +96,7 @@ const zooAnimals = [
   */
 
   function lowPopulationAnimals(zooAnimals){
-    var arr = zooAnimals.filter(animal => animal[`popoulation`] < 5)
+    var arr = zooAnimals.filter(animal => animal['population'] < 5)
     return arr
   }
   
@@ -159,7 +159,7 @@ function multiply(a , b){
 */
 
 function greeting(firstName, lastName){
-   return `Hello` + firstName + " " + lastName + ", nice to meet you!"
+   return `Hello ` + firstName + " " + lastName + ", nice to meet you!"
   }
 
   
@@ -209,7 +209,7 @@ CuboidMaker.prototype.volume = function(){
 */
 
 CuboidMaker.prototype.surfaceArea = function (){
-  return 2 * (this.length * this.width * this.length * this.height * this.width * this.height)
+  return 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
 } 
 
 
@@ -217,7 +217,8 @@ CuboidMaker.prototype.surfaceArea = function (){
   Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
 
-var cuboid = new CuboidMaker ({'length': 4, 'width': 5, 'height': 5})
+  var cuboid = new CuboidMaker({'length': 4, 'width': 5, 'height': 5})
+
 
 
 
